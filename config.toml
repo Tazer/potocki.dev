@@ -1,0 +1,4 @@
+baseURL = "https://potocki.dev/"
+languageCode = "en-us"
+title = "potocki.dev"
+theme = "ananke"
