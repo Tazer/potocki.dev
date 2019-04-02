@@ -1,7 +1,7 @@
 ---
-title: "My First Post"
+title: "Welcome to Potocki.dev"
 date: 2019-04-02T10:09:56+02:00
 draft: false
 ---
 
-Hello This is a test
+I will do something about this page.
