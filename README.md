@@ -1,0 +1,1 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/809e5527-4c5d-4afc-a95b-e6816789bd3f/deploy-status)](https://app.netlify.com/sites/dazzling-hamilton-bbc66b/deploys)
