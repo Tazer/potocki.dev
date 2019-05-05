@@ -15,7 +15,7 @@ disqusShortname = "rambo3swe"
 
 [params]
     author = "Patrik Potocki"
-    info = "Developer .NET golang aws docker kubernetes"
+    info = "Developer .net golang aws docker kubernetes"
     description = "Patirk Potocki's personal website"
     keywords = "blog,developer,personal"
     avatarurl = "images/avatar.svg"
