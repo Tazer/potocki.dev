@@ -10,7 +10,7 @@ Most engineers on my team are using AI agents now. The question isn't *whether* 
 
 There's a spectrum from full autonomy ("build me this") to tight step-by-step direction ("use this exact pattern, handle this edge case, call this function"). Most engineers default to one mode and stay there. The ones producing the best work move fluidly along the spectrum based on context.
 
-I've started calling this **agentic engineering** — the practice of orchestrating AI agents at the right level of guidance for the task at hand. It's not about writing better prompts. It's about making better decisions about how much control to keep.
+This is what people are calling **agentic engineering** — engineers shifting from writing code to coordinating agents that write code, with the real skill being how much oversight and direction to apply. It's not about writing better prompts. It's about making better decisions about how much control to keep.
 
 ## The Vibe Coding Zone
 
@@ -28,7 +28,7 @@ The key characteristic isn't laziness. It's a **deliberate assessment that the c
 
 Then there's production services, data pipelines, auth flows, financial logic, anything customer-facing. Here, you break work into small, precise tasks and review each step carefully.
 
-You're the architect. The agent is a skilled implementer who needs clear specs. You write the tests first, define interfaces, and let the agent fill in implementations. You might dictate the exact approach: "use the repository pattern here, return this error type, handle the timeout case by retrying once with exponential backoff."
+You're the architect. The agent is a skilled implementer who needs clear specs. You define the tests, specify the interfaces, and let the agent fill in implementations. You dictate the approach: "use the repository pattern here, return this error type, handle the timeout case by retrying once with exponential backoff."
 
 This isn't about not trusting the agent. It's about the stakes. A subtle bug in payment processing costs real money. An auth bypass exposes real user data. The cost of getting it wrong is orders of magnitude higher than the cost of being thorough.
 
@@ -48,7 +48,7 @@ Mostly left column? Vibe code it. Mostly right? Hands-on direction. Mixed? Colla
 
 This isn't a formal scoring system. It's a mental model that becomes instinctive with practice. The point is to make the decision *consciously* rather than defaulting to whatever you did last time.
 
-## The Four Workflow Modes
+## The Three Workflow Modes
 
 The engineers producing the most output across the broadest range of work are switching between these modes constantly:
 
@@ -58,9 +58,7 @@ The engineers producing the most output across the broadest range of work are sw
 
 **Directed** — You specify exact changes, step by step. The agent is your hands on the keyboard while you make every architectural choice. For high-risk areas where precision matters.
 
-**Manual** — You write the code yourself. Use agents for review, testing, or generating test cases. For the most critical or novel work where you need to think through every line.
-
-Here's the key insight: **a single feature often uses all four modes**. Scaffold the project structure autonomously. Direct the critical business logic. Collaborate on the API design. Manually handle the tricky edge cases that require deep domain knowledge. The transitions happen naturally once you develop a feel for it.
+Here's the key insight: **a single feature often uses all three modes**. Scaffold the project structure autonomously. Direct the agent through the critical business logic. Collaborate on the API design. The transitions happen naturally once you develop a feel for it.
 
 ## Common Mistakes
 
@@ -80,7 +78,7 @@ This is a skill, and like any skill, it improves with deliberate practice:
 
 **Classify tasks before starting.** Thirty seconds of risk assessment before you begin. Not a ceremony, not a form to fill out — just a conscious decision about which mode you're in.
 
-**Get comfortable with all four modes.** Most people default to one. If you always vibe code, practice directing. If you always direct, practice letting go on low-risk tasks. The discomfort means you're learning.
+**Get comfortable with all three modes.** Most people default to one. If you always vibe code, practice directing. If you always direct, practice letting go on low-risk tasks. The discomfort means you're learning.
 
 **Develop taste.** The best engineers I work with have an almost instinctive sense of when to intervene and when to let the agent run. This only comes from experience and paying attention to what works and what doesn't.
 
@@ -98,10 +96,12 @@ The engineers who dismiss this as "not real coding" are making the same mistake 
 
 ## Closing Thoughts
 
-The most productive engineers I know aren't writing all the code anymore. They're orchestrating — defining architecture, assessing risk, reviewing output, and intervening at exactly the right moments. But they absolutely know when to take the wheel.
+The most productive engineers I know aren't writing the code anymore. They're orchestrating — defining architecture, assessing risk, reviewing output, and intervening at exactly the right moments. But they absolutely know when to take the wheel.
 
 This isn't about prompt engineering. It's about **engineering judgment**: the ability to make good decisions about how to build systems, applied to a new set of tools.
 
 The bar for what makes a great engineer is shifting. Not from "can you write this code" to "can you use AI" — that's trivially learnable. It's shifting from "can you write this code" to "can you make the right decisions about how to build this system." That's always been the harder skill. Now it's the one that matters most.
 
-This post was written with an agent. The risk was low and the output was reviewable — that's the framework in action.
+One thing worth acknowledging: we're still in the early days of this. The framework I've described here reflects where I am today — working with my team, figuring out what works through trial and error. Models will get faster and more capable. Agents will get better at self-correction and reasoning about risk. The modes and boundaries I've outlined will shift as the tools mature. What won't change is the need for engineering judgment about when to trust and when to intervene. The specifics of how we apply that judgment? Ask me again in six months — I expect a different answer.
+
+This post was written with an agent, but the ideas are mine — shaped by months of working this way with my team at Fast Track. The risk of writing it this way was low and the output was reviewable. That's the framework in action.
