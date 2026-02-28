@@ -61,7 +61,7 @@ Built systems for shoe e-commerce, airline industry, and more. This is where I l
 
 <div class="output-block">
 
-AI agents have completely changed how I work. Tools like **Claude Code**, **Codex**, and other coding agents are now a core part of my daily workflow — from writing and reviewing code to exploring ideas and architecting systems.
+AI agents have completely changed how I work. Tools like **Claude Code**, **Codex**, and other coding agents are now a core part of my daily workflow — they write the code while I focus on reviewing, exploring ideas, and architecting systems.
 
 I believe the engineers who lean into these tools early will have a massive advantage. It's not about replacing developers; it's about **amplifying what a single engineer can accomplish**. The way we build software is shifting fast, and I'm here for it.
 
