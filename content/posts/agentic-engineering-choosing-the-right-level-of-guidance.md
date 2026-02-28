@@ -6,7 +6,7 @@ tags: [agentic-engineering, ai, engineering-leadership, developer-experience]
 description: "The real skill in working with AI agents isn't prompting — it's knowing when to give them full autonomy vs. tight direction."
 ---
 
-Most engineers on my team are using AI agents now. The question isn't *whether* to use them — it's *how*. And most people get this wrong.
+Most engineers on our team are using AI agents now. The question isn't *whether* to use them — it's *how*. And most people get this wrong.
 
 There's a spectrum from full autonomy ("build me this") to tight step-by-step direction ("use this exact pattern, handle this edge case, call this function"). Most engineers default to one mode and stay there. The ones producing the best work move fluidly along the spectrum based on context.
 
@@ -102,6 +102,6 @@ This isn't about prompt engineering. It's about **engineering judgment**: the ab
 
 The bar for what makes a great engineer is shifting. Not from "can you write this code" to "can you use AI" — that's trivially learnable. It's shifting from "can you write this code" to "can you make the right decisions about how to build this system." That's always been the harder skill. Now it's the one that matters most.
 
-One thing worth acknowledging: we're still in the early days of this. The framework I've described here reflects where I am today — working with my team, figuring out what works through trial and error. Models will get faster and more capable. Agents will get better at self-correction and reasoning about risk. The modes and boundaries I've outlined will shift as the tools mature. What won't change is the need for engineering judgment about when to trust and when to intervene. The specifics of how we apply that judgment? Ask me again in six months — I expect a different answer.
+One thing worth acknowledging: we're still in the early days of this. The framework I've described here reflects where I am today — working with our team, figuring out what works through trial and error. Models will get faster and more capable. Agents will get better at self-correction and reasoning about risk. The modes and boundaries I've outlined will shift as the tools mature. What won't change is the need for engineering judgment about when to trust and when to intervene. The specifics of how we apply that judgment? Ask me again in six months — I expect a different answer.
 
-This post was written with an agent, but the ideas are mine — shaped by months of working this way with my team at Fast Track. The risk of writing it this way was low and the output was reviewable. That's the framework in action.
+This post was written with an agent, but the ideas are mine — shaped by months of working this way with our team at Fast Track. The risk of writing it this way was low and the output was reviewable. That's the framework in action.
