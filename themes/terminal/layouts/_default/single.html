@@ -1,0 +1,18 @@
+{{ define "main" }}
+<article>
+  <div class="command-line fade-in">
+    <span class="prompt-symbol">$</span>
+    <span class="cmd">cat {{ .File.Path | default .Title }}</span>
+  </div>
+
+  <h1 class="fade-in" style="color: var(--green); font-size: 1.4rem; margin: 1rem 0; text-shadow: var(--glow-green); animation-delay: 0.1s;">{{ .Title }}</h1>
+
+  {{ if eq .Section "posts" }}
+  {{ partial "post-meta.html" . }}
+  {{ end }}
+
+  <div class="content fade-in" style="animation-delay: 0.2s;">
+    {{ .Content }}
+  </div>
+</article>
+{{ end }}

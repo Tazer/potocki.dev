@@ -1,1 +1,3 @@
-Welcome to my page.
+---
+title: "Home"
+---

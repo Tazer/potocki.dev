@@ -1,0 +1,17 @@
+{{ define "main" }}
+<div class="command-line fade-in">
+  <span class="prompt-symbol">$</span>
+  <span class="cmd">cat {{ .RelPermalink }}</span>
+</div>
+
+<div class="output-block fade-in" style="animation-delay: 0.15s;">
+  <p style="color: var(--red); margin-bottom: 1rem;">
+    <strong>bash: cat: {{ .RelPermalink }}: No such file or directory</strong>
+  </p>
+  <p style="color: var(--text-secondary); margin-bottom: 0.5rem;">The page you're looking for doesn't exist.</p>
+  <p>
+    <span class="prompt-symbol">$</span>
+    <span class="cmd">cd</span> <a href="/" style="color: var(--blue);">~/home</a>
+  </p>
+</div>
+{{ end }}

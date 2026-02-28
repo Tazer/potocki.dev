@@ -1,0 +1,19 @@
+{{ define "main" }}
+<div class="command-line fade-in">
+  <span class="prompt-symbol">$</span>
+  <span class="cmd">grep -r "{{ .Title }}" ~/blog/</span>
+</div>
+
+<div style="color: var(--text-secondary); font-size: 0.8rem; margin: 0.5rem 0 1rem;" class="fade-in" style="animation-delay: 0.1s;">
+  {{ len .Pages }} {{ if eq (len .Pages) 1 }}match{{ else }}matches{{ end }}
+</div>
+
+{{ range .Pages }}
+<div class="ls-entry fade-in">
+  <span class="ls-perms">-rw-r--r--</span>
+  <span class="ls-date">{{ .Date.Format "Jan 02 2006" }}</span>
+  <span class="ls-size">{{ .ReadingTime }}m</span>
+  <a href="{{ .Permalink }}" class="ls-name">{{ .Title }}</a>
+</div>
+{{ end }}
+{{ end }}

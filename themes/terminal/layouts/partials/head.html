@@ -1,0 +1,27 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} — {{ .Site.Title }}{{ end }}</title>
+
+{{- partial "seo.html" . -}}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+{{- $main := resources.Get "css/main.css" | minify | fingerprint -}}
+{{- $terminal := resources.Get "css/terminal.css" | minify | fingerprint -}}
+{{- $typography := resources.Get "css/typography.css" | minify | fingerprint -}}
+{{- $responsive := resources.Get "css/responsive.css" | minify | fingerprint -}}
+{{- $syntax := resources.Get "css/syntax.css" | minify | fingerprint -}}
+
+<link rel="stylesheet" href="{{ $main.RelPermalink }}" integrity="{{ $main.Data.Integrity }}">
+<link rel="stylesheet" href="{{ $terminal.RelPermalink }}" integrity="{{ $terminal.Data.Integrity }}">
+<link rel="stylesheet" href="{{ $typography.RelPermalink }}" integrity="{{ $typography.Data.Integrity }}">
+<link rel="stylesheet" href="{{ $responsive.RelPermalink }}" integrity="{{ $responsive.Data.Integrity }}">
+<link rel="stylesheet" href="{{ $syntax.RelPermalink }}" integrity="{{ $syntax.Data.Integrity }}">
+
+{{- with .OutputFormats.Get "rss" -}}
+<link rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" href="{{ .RelPermalink }}">
+{{- end -}}

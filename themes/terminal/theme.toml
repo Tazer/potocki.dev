@@ -1,0 +1,10 @@
+name = "Terminal"
+license = "MIT"
+licenselink = "https://github.com/tazer/potocki.dev/blob/master/LICENSE"
+description = "A terminal-themed Hugo theme"
+tags = ["terminal", "dark", "monospace", "blog"]
+min_version = "0.112.0"
+
+[author]
+  name = "Patrik Potocki"
+  homepage = "https://potocki.dev"

@@ -1,0 +1,56 @@
+{{ define "main" }}
+{{- partial "ascii-art.html" . -}}
+
+<div class="typing-container fade-in" style="animation-delay: 0.15s;">
+  <span class="prompt-symbol">$</span>
+  <span class="typing-text" id="typing-text"></span><span class="cursor"></span>
+</div>
+
+<div class="info-block fade-in" style="animation-delay: 0.3s;">
+  <div class="info-line">
+    <span class="info-label">role</span>
+    <span class="info-value"><span class="highlight-text">CTO</span> @ Fast Track</span>
+  </div>
+  <div class="info-line">
+    <span class="info-label">location</span>
+    <span class="info-value">Sweden</span>
+  </div>
+  <div class="info-line">
+    <span class="info-label">focus</span>
+    <span class="info-value">distributed systems, platform engineering, developer experience</span>
+  </div>
+  <div class="info-line">
+    <span class="info-label">stack</span>
+    <span class="info-value">Go · AWS · Kubernetes · Terraform · Docker</span>
+  </div>
+  <div class="info-line">
+    <span class="info-label">industry</span>
+    <span class="info-value">iGaming — player engagement & retention</span>
+  </div>
+</div>
+
+{{ $posts := where .Site.RegularPages "Section" "posts" }}
+{{ if $posts }}
+<div class="section-header fade-in" style="animation-delay: 0.45s;">Recent Posts</div>
+
+<div class="fade-in" style="animation-delay: 0.5s;">
+  <div class="ls-header">
+    <span style="width: 10ch;">perms</span>
+    <span style="width: 12ch;">date</span>
+    <span style="width: 6ch; text-align: right;">read</span>
+    <span>title</span>
+  </div>
+  {{ range first 5 $posts }}
+  <div class="ls-entry">
+    <span class="ls-perms">-rw-r--r--</span>
+    <span class="ls-date">{{ .Date.Format "Jan 02 2006" }}</span>
+    <span class="ls-size">{{ .ReadingTime }}m</span>
+    <a href="{{ .Permalink }}" class="ls-name">{{ .Title }}</a>
+  </div>
+  {{ end }}
+</div>
+{{ end }}
+
+{{- $typing := resources.Get "js/typing.js" | minify | fingerprint -}}
+<script src="{{ $typing.RelPermalink }}" integrity="{{ $typing.Data.Integrity }}" defer></script>
+{{ end }}

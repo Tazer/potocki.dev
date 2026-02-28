@@ -1,0 +1,34 @@
+{{ define "main" }}
+<div class="command-line fade-in">
+  <span class="prompt-symbol">$</span>
+  <span class="cmd">ls -la ~/blog/</span>
+</div>
+
+{{ $posts := .Pages }}
+{{ if $posts }}
+<div class="fade-in" style="animation-delay: 0.15s;">
+  <div style="color: var(--text-secondary); font-size: 0.8rem; margin-bottom: 1rem;">total {{ len $posts }}</div>
+
+  <div class="ls-header">
+    <span style="width: 10ch;">perms</span>
+    <span style="width: 12ch;">date</span>
+    <span style="width: 6ch; text-align: right;">read</span>
+    <span>title</span>
+  </div>
+  {{ range $posts }}
+  <div class="ls-entry">
+    <span class="ls-perms">-rw-r--r--</span>
+    <span class="ls-date">{{ .Date.Format "Jan 02 2006" }}</span>
+    <span class="ls-size">{{ .ReadingTime }}m</span>
+    <a href="{{ .Permalink }}" class="ls-name">{{ .Title }}</a>
+  </div>
+  {{ end }}
+</div>
+{{ else }}
+<div class="output-block fade-in" style="animation-delay: 0.15s;">
+  <span style="color: var(--text-secondary);">total 0</span>
+  <br>
+  <span style="color: var(--text-secondary); font-style: italic;">No posts yet. Check back soon.</span>
+</div>
+{{ end }}
+{{ end }}

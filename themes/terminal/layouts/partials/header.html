@@ -1,0 +1,9 @@
+<nav class="nav">
+  <div class="nav-prompt">
+    <span class="prompt-symbol">$</span>
+    <span class="cmd">cd</span>
+    {{ range .Site.Menus.main }}
+    <a href="{{ .URL }}" class="nav-link{{ if $.IsMenuCurrent "main" . }} active{{ end }}">~/{{ .Name | lower }}</a>
+    {{ end }}
+  </div>
+</nav>

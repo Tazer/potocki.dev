@@ -1,0 +1,19 @@
+<div style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 1.5rem; display: flex; gap: 1.5rem; flex-wrap: wrap;">
+  <span>
+    <span style="color: var(--yellow);">date:</span>
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 02, 2006" }}</time>
+  </span>
+  <span>
+    <span style="color: var(--yellow);">read:</span>
+    {{ .ReadingTime }} min
+  </span>
+  <span>
+    <span style="color: var(--yellow);">words:</span>
+    {{ .WordCount }}
+  </span>
+</div>
+{{ with .Params.tags }}
+<div style="margin-bottom: 1.5rem; display: flex; gap: 0.4rem; flex-wrap: wrap;">
+  {{ range . }}<a href="{{ "tags/" | absURL }}{{ . | urlize }}/" class="tag">{{ . }}</a>{{ end }}
+</div>
+{{ end }}

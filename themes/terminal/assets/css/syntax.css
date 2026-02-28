@@ -1,0 +1,77 @@
+/* Dracula-based syntax highlighting, terminal-matched */
+.highlight {
+  margin: 1rem 0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.highlight pre {
+  margin: 0;
+  border: 1px solid var(--border);
+}
+
+/* Chroma classes */
+.chroma { background: var(--bg-primary); color: var(--text-primary); }
+.chroma .ln { color: var(--text-secondary); margin-right: 0.75rem; user-select: none; }
+.chroma .lnt { color: var(--text-secondary); margin-right: 0.75rem; user-select: none; }
+.chroma .hl { background: rgba(74, 222, 128, 0.1); display: block; }
+
+/* Keywords */
+.chroma .k,
+.chroma .kc,
+.chroma .kd,
+.chroma .kn,
+.chroma .kp,
+.chroma .kr { color: #ff79c6; font-weight: 700; }
+.chroma .kt { color: #8be9fd; }
+
+/* Names */
+.chroma .n { color: var(--text-primary); }
+.chroma .na { color: #50fa7b; }
+.chroma .nb { color: #8be9fd; }
+.chroma .nc { color: #8be9fd; }
+.chroma .nf { color: #50fa7b; }
+.chroma .ni { color: var(--text-primary); }
+.chroma .nn { color: var(--text-primary); }
+.chroma .nt { color: #ff79c6; }
+
+/* Literals */
+.chroma .s,
+.chroma .sa,
+.chroma .sb,
+.chroma .sc,
+.chroma .sd,
+.chroma .se,
+.chroma .sh,
+.chroma .si,
+.chroma .sx,
+.chroma .s1,
+.chroma .s2,
+.chroma .ss { color: #f1fa8c; }
+
+/* Numbers */
+.chroma .m,
+.chroma .mb,
+.chroma .mf,
+.chroma .mh,
+.chroma .mi,
+.chroma .mo { color: #bd93f9; }
+
+/* Operators */
+.chroma .o,
+.chroma .ow { color: #ff79c6; }
+
+/* Comments */
+.chroma .c,
+.chroma .ch,
+.chroma .cm,
+.chroma .c1,
+.chroma .cp,
+.chroma .cpf,
+.chroma .cs { color: #6272a4; font-style: italic; }
+
+/* Generic */
+.chroma .gd { color: #ff5555; }
+.chroma .gi { color: #50fa7b; }
+.chroma .ge { font-style: italic; }
+.chroma .gs { font-weight: 700; }

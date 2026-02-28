@@ -1,0 +1,10 @@
+<footer style="margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--border); font-size: 0.75rem; color: var(--text-secondary);">
+  <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+    <span>&copy; {{ now.Year }} {{ .Site.Params.author }}</span>
+    <div style="display: flex; gap: 1rem;">
+      {{ with .Site.Params.social.github }}<a href="https://github.com/{{ . }}" title="GitHub">github</a>{{ end }}
+      {{ with .Site.Params.social.linkedin }}<a href="https://linkedin.com/in/{{ . }}" title="LinkedIn">linkedin</a>{{ end }}
+      {{ with .Site.Params.social.medium }}<a href="https://medium.com/@{{ . }}" title="Medium">medium</a>{{ end }}
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,51 @@
+baseURL = "https://potocki.dev"
+title = "Patrik Potocki"
+theme = "terminal"
+languageCode = "en"
+defaultContentLanguage = "en"
+
+paginate = 10
+enableRobotsTXT = true
+enableGitInfo = true
+
+[markup]
+  [markup.highlight]
+    style = "dracula"
+    lineNos = false
+    noClasses = false
+    guessSyntax = true
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+
+[params]
+  author = "Patrik Potocki"
+  description = "CTO at Fast Track. Writing about Go, distributed systems, Kubernetes, and engineering leadership."
+  keywords = ["blog", "golang", "kubernetes", "distributed-systems", "engineering-leadership", "cto"]
+
+  [params.social]
+    github = "tazer"
+    linkedin = "patrikpotocki"
+
+[[menu.main]]
+  name = "home"
+  weight = 1
+  url = "/"
+
+[[menu.main]]
+  name = "about"
+  weight = 2
+  url = "/about/"
+
+[[menu.main]]
+  name = "blog"
+  weight = 3
+  url = "/posts/"
