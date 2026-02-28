@@ -29,7 +29,7 @@ Led the complete infrastructure redesign: migrated from Rackspace to AWS, rewrot
 **Codespark** — Developer<br>
 Full-stack development across various client projects.
 
-**ezy Webwerkstaden** — Developer<br>
+**ezy Webwerkstaden** — Tech Lead<br>
 Web development and client solutions.
 
 **QuickSearch** — Developer<br>
