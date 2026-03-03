@@ -20,14 +20,15 @@
   HUGO_VERSION = "0.145.0"
 
 [[headers]]
+  for = "/css/giscus-terminal.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Access-Control-Allow-Origin = "https://giscus.app"
+
+[[headers]]
   for = "/css/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/css/giscus-terminal.css"
-  [headers.values]
-    Access-Control-Allow-Origin = "https://giscus.app"
 
 [[headers]]
   for = "/js/*"
