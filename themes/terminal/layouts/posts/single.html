@@ -15,6 +15,10 @@
     {{ .Content }}
   </div>
 
+  <div class="fade-in" style="animation-delay: 0.3s;">
+    {{ partial "comments.html" . }}
+  </div>
+
   {{ $related := .Site.RegularPages.Related . | first 3 }}
   {{ with $related }}
   <div class="fade-in" style="animation-delay: 0.3s;">

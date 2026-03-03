@@ -294,6 +294,21 @@
   text-shadow: var(--glow-green);
 }
 
+/* === Comments (giscus) === */
+.comments-section {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.giscus-container {
+  margin-top: 1rem;
+}
+
+.giscus-container .giscus-frame {
+  width: 100%;
+}
+
 /* === Typing Animation === */
 .typing-container {
   margin: 1rem 0 1.5rem;

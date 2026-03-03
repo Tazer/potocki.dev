@@ -32,6 +32,15 @@ enableGitInfo = true
   description = "CTO at Fast Track. Writing about Go, distributed systems, Kubernetes, and engineering leadership."
   keywords = ["blog", "golang", "kubernetes", "distributed-systems", "engineering-leadership", "cto"]
 
+  [params.giscus]
+    repo = "Tazer/potocki.dev"
+    repoId = "MDEwOlJlcG9zaXRvcnkxNzkwMjg3NzY="
+    category = "Comments"
+    categoryId = "DIC_kwDOCqvDKM4C3n4E"
+    mapping = "pathname"
+    theme = "https://potocki.dev/css/giscus-terminal.css"
+    lang = "en"
+
   [params.social]
     github = "tazer"
     linkedin = "patrikpotocki"
