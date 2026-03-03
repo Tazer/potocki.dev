@@ -189,6 +189,7 @@ main .btn-primary {
 
 main .gsc-comment-box-bottom .btn-primary:hover,
 main .btn-primary:hover {
+  color: #0a0e14 !important;
   box-shadow: 0 0 16px rgba(74, 222, 128, 0.35), 0 0 6px rgba(74, 222, 128, 0.2);
 }
 
