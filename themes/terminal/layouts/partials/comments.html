@@ -1,7 +1,10 @@
 {{ with .Site.Params.giscus }}
 {{ if .repoId }}
 <div class="comments-section">
-  <div class="section-header" style="margin-top: 3rem;">Comments</div>
+  <div class="command-line">
+    <span class="prompt-symbol">$</span>
+    <span class="cmd">git log --comments</span>
+  </div>
   <div class="giscus-container">
     <script src="https://giscus.app/client.js"
             data-repo="{{ .repo }}"

@@ -296,13 +296,46 @@
 
 /* === Comments (giscus) === */
 .comments-section {
-  margin-top: 2rem;
-  padding-top: 1rem;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
   border-top: 1px solid var(--border);
+  position: relative;
+}
+
+.comments-section::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 60px;
+  height: 1px;
+  background: var(--green);
+  box-shadow: var(--glow-green);
+}
+
+.comments-section .command-line {
+  margin: 0 0 1.25rem;
 }
 
 .giscus-container {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
+  padding: 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+}
+
+.giscus-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--green), var(--cyan));
+  box-shadow: var(--glow-green);
 }
 
 .giscus-container .giscus-frame {
