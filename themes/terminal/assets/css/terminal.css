@@ -319,23 +319,6 @@
 
 .giscus-container {
   margin-top: 0.5rem;
-  padding: 1rem;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  position: relative;
-  overflow: hidden;
-}
-
-.giscus-container::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 2px;
-  height: 100%;
-  background: linear-gradient(180deg, var(--green), var(--cyan));
-  box-shadow: var(--glow-green);
 }
 
 .giscus-container .giscus-frame {

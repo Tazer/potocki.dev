@@ -91,16 +91,19 @@ main * {
   font-family: 'JetBrains Mono', ui-monospace, 'Cascadia Code', 'Fira Code', monospace !important;
 }
 
-/* Reactions section */
+/* Reactions section — borderless, blends with background */
 main .gsc-reactions {
-  border: 1px solid #1e2d3d;
-  background: #0d1219;
-  border-radius: 6px;
+  border: none;
+  background: transparent;
 }
 
 main .gsc-reactions-count {
   font-size: 0.8rem;
   color: #5c6a7a;
+}
+
+main .gsc-reactions .color-border-default {
+  border-color: transparent !important;
 }
 
 main .gsc-social-reaction-summary-item {
@@ -130,51 +133,49 @@ main .gsc-header-link {
   font-size: 0.75rem;
 }
 
-/* Comment box container */
+/* Comment box container — single clean border */
 main .gsc-comment-box {
-  border: 1px solid #1e2d3d;
+  border: 1px solid rgba(30, 45, 61, 0.6);
   border-radius: 6px;
-  background: #0d1219;
+  background: transparent;
   overflow: hidden;
 }
 
 /* Write/Preview tabs */
 main .gsc-comment-box-tabs {
-  background: #111921;
-  border-bottom: 1px solid #1e2d3d;
+  background: rgba(17, 25, 33, 0.5);
+  border-bottom: 1px solid rgba(30, 45, 61, 0.4);
 }
 
 main .gsc-comment-box-md-toolbar {
-  background: #111921;
-  border-bottom: 1px solid rgba(30, 45, 61, 0.5);
+  background: transparent;
+  border-bottom: none;
 }
 
-/* Textarea */
+/* Textarea — seamless with comment box */
 main .gsc-comment-box-textarea {
-  background: #0a0e14;
-  border: 1px solid #1e2d3d;
+  background: transparent;
+  border: none;
   color: #c5cdd8;
-  border-radius: 4px;
   font-size: 0.85rem;
   line-height: 1.7;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: box-shadow 0.2s ease;
 }
 
 main .gsc-comment-box-textarea:focus {
-  border-color: rgba(74, 222, 128, 0.4);
-  box-shadow: 0 0 0 2px rgba(74, 222, 128, 0.08), 0 0 12px rgba(74, 222, 128, 0.06);
+  box-shadow: none;
   outline: none;
 }
 
 main .gsc-comment-box-textarea::placeholder {
-  color: #5c6a7a;
+  color: rgba(92, 106, 122, 0.6);
   font-style: normal;
 }
 
 /* Comment box bottom bar */
 main .gsc-comment-box-bottom {
-  background: #0d1219;
-  border-top: 1px solid rgba(30, 45, 61, 0.5);
+  background: transparent;
+  border-top: 1px solid rgba(30, 45, 61, 0.4);
 }
 
 /* Primary button (Comment / Sign in) glow effect */
@@ -193,15 +194,15 @@ main .btn-primary:hover {
 
 /* Individual comments */
 main .gsc-comment {
-  border: 1px solid #1e2d3d;
+  border: 1px solid rgba(30, 45, 61, 0.6);
   border-radius: 6px;
-  background: #0d1219;
+  background: transparent;
   overflow: hidden;
 }
 
 main .gsc-comment .gsc-comment-header {
-  background: #111921;
-  border-bottom: 1px solid rgba(30, 45, 61, 0.5);
+  background: rgba(17, 25, 33, 0.4);
+  border-bottom: 1px solid rgba(30, 45, 61, 0.4);
 }
 
 main .gsc-comment-author-avatar img {
