@@ -7,3 +7,10 @@ public/
 
 # Screenshots
 *.png
+
+# Python
+__pycache__/
+*.pyc
+
+# Audio chunk cache (intermediate ElevenLabs responses)
+.audio-cache/
