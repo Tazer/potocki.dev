@@ -30,7 +30,7 @@ Throughput per engineer has gone up several multiples and is still climbing. Wor
 
 Estimation took the worst hit. Velocity per task is now wildly variable: an engineer plus a good agent can finish in a day what used to take a week, and then spend a week on something that looked trivial. Sprint estimates were already mostly fiction. With agents in the loop they're fiction with extra steps — story points calibrated against a workflow that doesn't exist anymore.
 
-Real product work also doesn't fit cleanly in two-week boxes. Some things take three days. Some take two months. Forcing both into the same container produces two failure modes that show up everywhere: small work gets padded to fill the sprint, and big work gets sliced into arbitrary "sprint-sized" chunks that don't correspond to anything real. Speed makes both worse — the small stuff now finishes in an afternoon, and the big stuff is more obviously misshapen when chopped.
+Real product work also doesn't fit cleanly in two-week boxes. A small fix might take three days. A first-version project might take three or four weeks. Forcing both into the same container produces two failure modes that show up everywhere: small work gets padded to fill the sprint, and bigger work gets sliced into arbitrary "sprint-sized" chunks that don't correspond to anything real. Speed makes both worse — the small stuff now finishes in an afternoon, and the bigger stuff lands much faster than the calendar suggests.
 
 And honestly, sprints reward the wrong thing. They reward closing tickets. They don't reward shipping outcomes, owning a problem to its conclusion, or making something a customer actually uses. The metric and the goal drifted apart, and most teams kept measuring the metric. When the team was moving slowly, you barely noticed. When the team is moving 5x faster than the planning cadence assumed, the gap is embarrassing.
 
@@ -42,9 +42,13 @@ The replacement isn't "no process." It's a different shape of process — one or
 
 **Project** — the concrete deliverable inside an initiative. A project answers *what we need to accomplish*. It has a definition of done that someone could check. "Ship a redesigned signup flow that gets a new user to first value in under five minutes" is a project. "Improve onboarding" is not. Each project ladders up to exactly one initiative — if it doesn't, that's a signal the initiative isn't real or the project shouldn't exist yet.
 
+The first version of a project should ship fast — days to a few weeks, almost never longer. Two-month first versions are how you ship the wrong thing for two months. If a project is genuinely large, scope the v1 down to the smallest version that delivers real value, ship it, then iterate. Shipping early isn't a nice-to-have, it's the thing that makes the whole model work — you find out whether the bet is right while it's still cheap to change direction.
+
 **Owners** — 1 to 3 engineers, assigned to a project, who own it end to end. Not "assigned tasks within it." Own it. They scope the work, design the approach, write the code, ship it, watch it in production, and follow up on the metrics. They are accountable for the project landing — not just for their tickets being closed.
 
 **Producer** — the person whose job is making sure the project actually delivers the value it promised, and that the value still maps to the initiative. The producer keeps the team unblocked, validates the shape of what's being built against the real customer problem, kills work that's drifted off-target, and protects scope when the team is being pulled sideways. This isn't a project manager pushing tickets. It's closer to a film producer: the buck stops with them on whether the thing ships and whether it was worth shipping.
+
+**Supporting functions — Design and QA.** Most projects need design input and quality assurance, but neither is the owner. A designer embeds in the project to shape the user-facing surface — flows, components, interaction details — and stays close while engineers build. QA partners with the team on test strategy, exploratory testing, and the edge cases engineers won't catch on their own. They're not handed a queue of tickets. They're attached to the project for its duration, accountable for their slice of the outcome, and they ship with the team. Same principle as the rest of the model: small, named, accountable, attached to one project at a time wherever possible.
 
 ## How it actually works
 
@@ -81,6 +85,8 @@ Two-pizza teams, squad-of-eight, "the whole platform team owns this" — these a
 
 One engineer is fine for a small, well-scoped project. Two is the sweet spot for most. Three is the upper limit before coordination cost starts eating the gains. If a project genuinely needs more than three engineers, that's a strong signal it should be split into smaller projects, each with its own 1–3 owner team, all laddering to the same initiative.
 
+The 1–3 cap is on *engineering owners*, not on humans involved. A designer embedded in the project, a QA partner running test strategy, the producer keeping the project honest — none of those count toward the cap, because they're supporting the owners, not co-owning the build. The accountability for the project landing still sits with the engineers.
+
 This also changes hiring and promotion. You're not optimising for engineers who can take tickets and execute. You're optimising for engineers who can take a *project* — fuzzy edges, real customer in mind, no one to escalate ambiguity to — and land it. That's a different and much higher bar, and it's the bar that matters now.
 
 ## What the producer is actually doing
@@ -103,6 +109,8 @@ The best producers are people who could have been engineers or PMs and have a fo
 **Initiatives that aren't real directions.** "Improve quality." "Be more customer-centric." "Modernise the stack." These are values, not initiatives. An initiative tells you which projects belong inside it and which don't. If everything qualifies, it isn't doing the work.
 
 **Projects without a clear definition of done.** If the team can't tell you, in one sentence, what will be true when this project is finished and who will benefit, the project is too vague to start. Ship the definition first.
+
+**Letting the first version stretch into months.** A two-month v1 is almost always a sign that scope wasn't cut hard enough. If the team can't get something real in front of users in a few weeks, the project is too big and needs to be split. The longer the first version takes, the more expensive it is to discover you built the wrong thing.
 
 **Five engineers on one "project."** That's not a project, it's a programme. Split it into multiple projects with 1–3 owners each, and accept that they'll need to talk to each other. Coordination across small projects is healthier than consensus inside a big one.
 
