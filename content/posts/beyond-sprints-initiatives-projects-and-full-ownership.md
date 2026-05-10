@@ -102,6 +102,8 @@ The producer's actual job is to keep the project pointed at value. Concretely:
 
 The best producers are people who could have been engineers or PMs and have a foot in both worlds. They earn their seat at the table by making projects ship better than they would have otherwise — not by running ceremonies.
 
+This is why the producer ends up being the backbone of the organisation in this model. Every project flows through them. Every initiative is kept honest by them. Every "are we still solving the right thing?" question lands on their desk. For that to work, the producer has to have real context — not surface-level familiarity, but having lived it: walked in the customer's shoes, used the product the way the customer uses it, sat through the conversations where the pain actually shows up. That's what it takes to make the right calls. A producer without that context is guessing, and the team feels it within a week.
+
 ## Common mistakes
 
 **Renaming sprints to "cycles" and calling it a day.** If you've kept the two-week box, the planning ceremony, and the velocity chart, and you've just changed the word, nothing has changed. The container is the problem.
