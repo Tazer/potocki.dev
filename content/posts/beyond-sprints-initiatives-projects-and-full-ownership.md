@@ -16,7 +16,7 @@ I don't think sprints are needed anymore. Not as a planning tool, not as a caden
 
 The reason this matters *now* is speed. With AI in the loop, we're shipping multiples faster than we were even a year ago. An engineer plus a competent agent lands in a day what used to take a week. Code review went from a day to an hour. Scaffolding a service is minutes. The planning cadence we built around the old speed isn't just outdated — it's actively in the way of how fast the team can actually move.
 
-The teams I see shipping the most meaningful work right now aren't running tighter sprints. They've stopped running them at all. What replaced sprints is simpler and, in my experience, much harder to fake: a clear **initiative** that says where we're going, **projects** inside it that say what we need to accomplish, and **1–3 engineers per project** who own delivery end to end — supported by a **producer** whose job is making sure the work actually delivers value and moves the initiative forward.
+The teams I see shipping the most meaningful work right now aren't running tighter sprints. They've stopped running them at all. What replaced sprints is simpler and, in my experience, much harder to fake: a clear **initiative** that says where we're going, **projects** inside it that say what we need to accomplish, and **a small project team with one named engineering owner** accountable for delivery end to end — supported by a **producer** whose job is making sure the work actually delivers value and moves the initiative forward.
 
 This post is about why we made that shift and how the pieces fit together.
 
@@ -44,7 +44,7 @@ The replacement isn't "no process." It's a different shape of process — one or
 
 The first version of a project should ship fast — days to a few weeks, almost never longer. Two-month first versions are how you ship the wrong thing for two months. If a project is genuinely large, scope the v1 down to the smallest version that delivers real value, ship it, then iterate. Shipping early isn't a nice-to-have, it's the thing that makes the whole model work — you find out whether the bet is right while it's still cheap to change direction.
 
-**Owners** — 1 to 3 engineers, assigned to a project, who own it end to end. Not "assigned tasks within it." Own it. They scope the work, design the approach, write the code, ship it, watch it in production, and follow up on the metrics. They are accountable for the project landing — not just for their tickets being closed.
+**Owner** — every project has one named engineering owner who is accountable for it landing end to end. Often there's a second or third engineer working alongside them, depending on the size of the project, but the buck stops with one person. They scope the work, design the approach, write the code, ship it, watch it in production, and follow up on the metrics. The owner isn't "assigned tasks within the project." They own the outcome — not just their tickets.
 
 **Producer** — the person whose job is making sure the project actually delivers the value it promised, and that the value still maps to the initiative. The producer keeps the team unblocked, validates the shape of what's being built against the real customer problem, kills work that's drifted off-target, and protects scope when the team is being pulled sideways. This isn't a project manager pushing tickets. It's closer to a film producer: the buck stops with them on whether the thing ships and whether it was worth shipping.
 
@@ -68,7 +68,7 @@ The two models pull in different directions on most of the things that actually 
 |---------|--------------|------------------|
 | **Unit of work** | Tickets sized to fit a 2-week box | Projects sized to the actual problem |
 | **Planning cadence** | Every two weeks, for everyone | Per project, when the project starts |
-| **Ownership** | Tickets assigned individually | 1–3 engineers own a project end to end |
+| **Ownership** | Tickets assigned individually | One named engineering owner, small team around them |
 | **Done means** | Ticket closed | Outcome shipped and validated |
 | **Direction** | Set in roadmap docs, often stale | Set by the active initiative |
 | **Status reporting** | Burndown, velocity, story points | Project state, customer impact, blockers |
@@ -77,15 +77,15 @@ The two models pull in different directions on most of the things that actually 
 
 The interesting thing about that last row: the initiative model exposes wrong-project decisions much faster than the sprint model exposes wrong-ticket decisions. When a project is the unit of work and a producer is checking it against the initiative, "we're building the wrong thing" is a question that gets asked weekly, not quarterly.
 
-## Why ownership has to be small
+## Why these teams have to stay small
 
-The 1–3 engineer constraint is the most important part of this and the part that gets watered down first.
+The "small team, single owner" part of this model is the most important and the part that gets watered down first.
 
 Two-pizza teams, squad-of-eight, "the whole platform team owns this" — these all sound like ownership and they aren't. Ownership requires that *someone, by name, can make every decision the project needs*. Once you have five engineers on a project, decisions route through meetings. Once you have eight, the project slows to the speed of consensus. Once you have ten, nobody is actually accountable and the project becomes everybody's-and-nobody's.
 
-One engineer is fine for a small, well-scoped project. Two is the sweet spot for most. Three is the upper limit before coordination cost starts eating the gains. If a project genuinely needs more than three engineers, that's a strong signal it should be split into smaller projects, each with its own 1–3 owner team, all laddering to the same initiative.
+The shape that works for us looks like this: one named engineering owner per project, often with one or two more engineers alongside, plus a designer if the project has a meaningful UI surface, a QA partner if the risk justifies it, and a producer keeping the whole thing honest. The exact numbers flex with the project — what doesn't flex is *small*. If the team starts looking like a sub-org chart, the project is too big and should be split into smaller projects, each with its own owner, all laddering to the same initiative.
 
-The 1–3 cap is on *engineering owners*, not on humans involved. A designer embedded in the project, a QA partner running test strategy, the producer keeping the project honest — none of those count toward the cap, because they're supporting the owners, not co-owning the build. The accountability for the project landing still sits with the engineers.
+A single engineering owner sounds risky to people used to bigger teams. In practice it's the opposite: it forces the project to be sized to a human, forces clear scope, and removes the ambiguity about who decides. When two or three engineers work on the same project, it still works — because there's one name on the project, not a committee.
 
 This also changes hiring and promotion. You're not optimising for engineers who can take tickets and execute. You're optimising for engineers who can take a *project* — fuzzy edges, real customer in mind, no one to escalate ambiguity to — and land it. That's a different and much higher bar, and it's the bar that matters now.
 
@@ -112,7 +112,7 @@ The best producers are people who could have been engineers or PMs and have a fo
 
 **Letting the first version stretch into months.** A two-month v1 is almost always a sign that scope wasn't cut hard enough. If the team can't get something real in front of users in a few weeks, the project is too big and needs to be split. The longer the first version takes, the more expensive it is to discover you built the wrong thing.
 
-**Five engineers on one "project."** That's not a project, it's a programme. Split it into multiple projects with 1–3 owners each, and accept that they'll need to talk to each other. Coordination across small projects is healthier than consensus inside a big one.
+**Big teams masquerading as one "project."** A project that needs five or six engineers isn't a project, it's a programme. Split it into smaller projects, each with its own named owner, and accept that they'll need to talk to each other. Coordination across small projects is healthier than consensus inside a big one.
 
 **Producers who turn into ticket pushers.** If your producer's calendar is full of standups and their main artefact is a Jira board, they've drifted into project management. Pull them back to the part of the job that only they can do: keeping the project honest against the initiative.
 
